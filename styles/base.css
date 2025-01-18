@@ -42,7 +42,6 @@ nav a:hover {
     background-color: #007BFF; 
 }
 
-
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -85,7 +84,6 @@ footer {
 footer p {
     margin: 0.5rem 0;
 }
-
 
 @media (max-width: 768px) {
     nav {

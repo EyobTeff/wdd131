@@ -1,0 +1,14 @@
+@media screen and (min-width: 500px) {
+    /* Header Styling for Large Screens */
+    header {
+      background-color: #000000; /* Black background */
+      color: #ffffff; /* White text */
+      text-align: center;
+    }
+  
+    /* Main Grid for Large Screens */
+    main {
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+    }
+  }
+  

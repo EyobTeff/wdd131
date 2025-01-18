@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Eyob Teffera - HTML, CSS, JavaScript">
-    <meta name="author" content="Eyob Teffera">
-    <title>WDD 131 - Dynamic Web Fundamentals - Eyob Teffera</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio page with resources">
+  <meta name="author" content="Eyob Teffera">
+  <title>WDD 131: Dynamic Web Fundamentals</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>WDD 131 - Dynamic Web Fundamentals - Eyob Teffera</h1>
-        <nav>
-            <a href="https://linkedin.com/in/eyobteffera" target="_blank">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng#:~:text=12%20And%20now,they%20cannot%20fall." target="_blank">Scripture</a>
-            <a href="#">Final Project</a>
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        
-    </header>
-    <main>
-        <section class="card">
-            <h2>Dynamic Web Fundamentals</h2>
-            <img src="images/dynamic-web.jpg" alt="Illustration of Dynamic Web Concepts">
-            <p>Explore the fundamentals of creating interactive and dynamic web pages using HTML, CSS, and JavaScript.</p>
-        </section>
-        <section class="card">
-            <h2>Enhancing User Interaction</h2>
-            <img src="images/user-interaction.jpg" alt="Illustration of Enhancing User Interaction">
-            <p>Learn to create interactive elements such as form validation, event handling, and dynamic content updates with JavaScript.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Eyob Teffera, Idaho/USA</p>
-        <p id="lastModified"></p>
-    </footer>
+  <header>
+    <h1>WDD 131: Dynamic Web Fundamentals - <span>Eyob Teffera</span></h1>
+    <nav>
+        <a href="https://linkedin.com/in/eyobteffera" target="_blank">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng#:~:text=12%20And%20now,they%20cannot%20fall." target="_blank">Scripture</a>
+        <a href="#">Final Project</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+  <main>
+    <section class="about-me">
+      <h2>About Me</h2>
+      <p>
+        You can call me Eyob Teffera. Although I currently reside in Sugar City, Idaho, USA, I was born in Addis Ababa, Ethiopia. I work as a carpenter at the moment. I enjoy outdoor activities a lot. I like going to locations with stunning scenery and spending time with my family.
+      </p>
+      <img src="images/profile.jpg" alt="Your Name">
+    </section>
+    <section class="location">
+      <h2>Idaho</h2>
+      <p>
+        Idaho spans two time zones, stretching from Canada to Nevada, with rivers, mountains, and farmland dominating its landscape. The panhandle features green hills, timbered mountains, and pristine lakes. Idaho borders Montana, Wyoming, Nevada, Utah, Washington, Oregon, and British Columbia, Canada. It is known for its stunning scenery, including the Rocky Mountains, the Snake River, and Hells Canyon gorge.
+      </p>
+      <img src="images/Flag and Seal of Idaho.png" alt="Official Flag">
+    </section>
+    <aside class="resources">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com">Udemy</a></li>
+        <li><a href="https://placeholder.com">Image Placeholder</a></li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <p>&copy; 2025 ⛰️ [Eyob Teffera] ⛰️ [Idaho,USA]</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,4 @@
-// scripts/getdates.js
-
-// Dynamically populate the current year
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-// Dynamically populate the last modified date
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+// Dynamically update the last modified date in the footer
+const lastModifiedElement = document.getElementById("last-modified");
+const lastModified = document.lastModified;
+lastModifiedElement.textContent = lastModified;
