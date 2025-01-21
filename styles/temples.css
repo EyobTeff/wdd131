@@ -6,51 +6,66 @@ body {
     color: #333;
   }
   
-  header {
-    background-color: #4a0072;
-    color: #fff;
-    padding: 1rem;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    text-align:left;
-  }
-  
-  nav {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-  
-  .nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+ /* General styling for the header and nav */
+header {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .nav-menu li {
-    display: inline;
-  }
-  
-  .nav-menu a {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4b0082;
+    color: white;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li a {
     text-decoration: none;
-    color: #fff;
+    color: white;
     font-weight: bold;
-  }
-  
-  .nav-menu a:hover {
-    color: #f0f0f0;
-    text-decoration: underline;
-  }
-  
-  main {
-    text-align: center;
-    padding: 1rem;
-  }
+}
+
+.nav-menu li a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        background-color: #4b0082;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border: 1px solid #fff;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+}
+
   
   h2 {
     font-size: 1.5rem;
@@ -92,4 +107,4 @@ body {
   footer p {
     margin: 0.5rem 0;
   }
-  
+ 
