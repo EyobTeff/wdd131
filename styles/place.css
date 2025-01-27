@@ -1,87 +1,70 @@
 /* Global Styles */
-:root {
-    --primary-color: #B22234; /* Red for Idaho state flag */
-    --secondary-color: #003F87; /* Blue for Idaho state flag */
-    --text-color: #000000;
-    --background-color: #FFFFFF;
-    --font-family: Arial, sans-serif;
-}
-
 body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     margin: 0;
-    font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--background-color);
-}
-
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
-
-/* Hero Section */
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-section {
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-}
-
-/* Data Section */
-.data {
-    font-size: 1rem;
-}
-
-.data label {
-    font-weight: bold;
-}
-
-/* Weather Section */
-.weather {
-    text-align: center;
-}
-
-.weather img {
-    max-width: 100px;
-    margin: 0 auto;
-}
-.weather-icon .emoji {
-    font-size: 2rem; /* Adjust size */
-    display: block;
-    text-align: center;
-    margin-bottom: 1rem;
+    padding: 0;
   }
   
-
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--background-color);
+  header {
+    background: #BF0A30; /* Idaho flag-inspired color */
+    color: white;
     text-align: center;
+    padding: 1rem 0;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  picture img {
+    width: 100%;
+    height: auto;
+  }
+  
+  main {
     padding: 1rem;
-    font-size: 0.875rem;
-}
-
-/* Media Query for Larger Screens */
-@media (min-width: 768px) {
-    .hero img {
-        height: 400px;
-    }
-
-    section {
-        display: inline-block;
-        width: 45%;
-        vertical-align: top;
-        margin: 1rem 2%;
-    }
-}
+  }
+  
+  /* Data Section */
+  .data h2 {
+    color: #003F87;
+  }
+  
+  .data ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Weather Section */
+  .weather {
+    margin-top: 2rem;
+  }
+  
+  .weather h2 {
+    color: #003F87;
+    position: relative;
+  }
+  
+  /* Weather Icon */
+  .weather-icon {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  /* Pseudo-element ::after */
+  .weather h2::after {
+    content: "⛅";
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-left: 0.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #BF0A30;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
