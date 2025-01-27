@@ -1,13 +1,25 @@
-/* Global Styles */
-body {
+/* Global Variables */
+:root {
+    --primary-color: #BF0A30; /* Idaho flag-inspired color */
+    --secondary-color: #FFD700; /* Accent color for weather icon */
+    --background-color: #f4f4f4; /* Light background */
+    --font-color: #333333; /* Text color */
+    --font-size: 16px; /* Base font size */
+  }
+  
+  /* Global Styles */
+  body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-size: var(--font-size);
   }
   
   header {
-    background: #BF0A30; /* Idaho flag-inspired color */
+    background: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -28,7 +40,7 @@ body {
   
   /* Data Section */
   .data h2 {
-    color: #003F87;
+    color: #003F87; /* Dark blue for section headers */
   }
   
   .data ul {
@@ -54,25 +66,28 @@ body {
   
   /* Pseudo-element ::after */
   .weather h2::after {
-    content: "⛅";
+    content: "⛅"; /* Decorative weather icon */
     font-size: 1.5rem;
-    color: #FFD700;
+    color: var(--secondary-color);
     margin-left: 0.5rem;
   }
   
   /* Footer */
   footer {
-    background: #BF0A30;
+    background: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem 0;
   }
+  
+  /* Media Queries */
+  
   /* Default styles for mobile-first approach (small screens) */
-body {
+  body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
   }
   
   /* Adjust styles for larger screens (e.g., tablets) */
@@ -111,19 +126,8 @@ body {
       text-align: center;
     }
   }
-  body {
-    background-color: var(--background-color);
-    color: var(--font-color);
-    font-size: var(--font-size);
-    font-family: 'Roboto', sans-serif;
-  }
   
-  header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-  }
-  
+  /* Button Styles */
   button {
     background-color: var(--secondary-color);
     color: white;

@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Explore Idaho: Weather, Culture, and Facts</title>
-        <meta name="description" content="Explore the beautiful state of Idaho!">
-        <meta name="author" content="Eyob Teffera">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/place.css">
-      </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fixed Title -->
+  <title>Explore Idaho: Weather, Culture, and Facts</title>
+  
+  <!-- Fixed Meta Description -->
+  <meta name="description" content="Discover the beauty of Idaho with its stunning landscapes, weather details, and cultural highlights. Learn about its population, capital, and more!">
+  
+  <!-- Fixed Meta Author -->
+  <meta name="author" content="Eyob Teffera">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS File -->
+  <link rel="stylesheet" href="styles/place.css">
+</head>
 <body>
   <header>
     <h1>Idaho</h1>
   </header>
+
+  <!-- Responsive Image with srcset -->
   <picture>
     <source srcset="images/idaho-large.webp" media="(min-width: 768px)">
     <img src="images/idaho-small.webp" alt="Beautiful landscape of Idaho">
   </picture>
 
   <main>
+    <!-- Data Section -->
     <section class="data">
       <h2>Data</h2>
       <ul>
@@ -33,10 +45,14 @@
       </ul>
     </section>
 
+    <!-- Weather Section -->
     <section class="weather">
       <h2>Weather</h2>
       <div class="weather-icon">
+        <!-- Weather Emoji -->
         <span class="emoji">⛅</span>
+        
+        <!-- Weather SVG Icon -->
         <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="32" cy="32" r="12"></circle>
           <line x1="32" y1="4" x2="32" y2="12"></line>
@@ -49,15 +65,17 @@
         <li><strong>Temperature:</strong> <span id="temperature">10</span>°C</li>
         <li><strong>Conditions:</strong> Partly Cloudy</li>
         <li><strong>Wind:</strong> <span id="windSpeed">5</span> km/h</li>
-        <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+        <li><strong>Wind Chill:</strong> <span id="windChill">N/A</span></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 ⛰️ Eyob Teffera ⛰️ Idaho,USA</p>
+    <p>&copy; 2025 ⛰️ Eyob Teffera ⛰️ Idaho, USA</p>
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
+
+  <!-- JavaScript File -->
   <script src="scripts/place.js" defer></script>
 </body>
 </html>
