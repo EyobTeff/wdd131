@@ -3,40 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A collection of temple images displayed dynamically with filtering options.">
+  <meta name="description" content="A collection of beautiful temple images with details and filtering options.">
   <meta name="author" content="Eyob Teffera">
   <title>Filtered Temples</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">  
   <link rel="stylesheet" href="styles/filtered-temples.css">
   <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Temple Album</h1>
-    <button class="hamburger" aria-label="Toggle navigation menu">&#9776;</button>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#" data-filter="all">Home</a></li>
-        <li><a href="#" data-filter="old">Old</a></li>
-        <li><a href="#" data-filter="new">New</a></li>
-        <li><a href="#" data-filter="large">Large</a></li>
-        <li><a href="#" data-filter="small">Small</a></li>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
+    <nav id="nav-menu" class="nav-menu">
+      <ul>
+        <li><a href="#" data-filter="all">All</a></li>
+        <li><a href="#" data-filter="old">Old Temples</a></li>
+        <li><a href="#" data-filter="new">New Temples</a></li>
+        <li><a href="#" data-filter="large">Large Temples</a></li>
+        <li><a href="#" data-filter="small">Small Temples</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <h2>Temple Gallery</h2>
-    <section id="temple-container" class="grid-container"></section>
+    <section id="temple-container" class="grid-container" aria-live="polite"></section>
   </main>
   <footer>
     <p>&copy; 2025 ⛰️ Eyob Teffera ⛰️ Idaho, USA</p>
     <p>Last Modification: <span id="last-modified"></span></p>
-  </footer>
+  </footer>  
   <script>
-    document.getElementById("last-modified").textContent = document.lastModified;
+   document.getElementById("last-modified").textContent = document.lastModified;
   </script>
 </body>
 </html>
