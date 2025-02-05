@@ -30,13 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         dedicated: "2020, May, 2",
         area: 6861,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
-      },
-      {
-        templeName: "Washington D.C.",
-        location: "Kensington, Maryland, United States",
-        dedicated: "1974, November, 19",
-        area: 156558,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
       }
     ];
   
@@ -64,18 +57,22 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
   
+      const fragment = document.createDocumentFragment();
+  
       filteredTemples.forEach(temple => {
         const templeCard = document.createElement("div");
         templeCard.classList.add("temple-card");
         templeCard.innerHTML = `
-          <img src="${temple.imageUrl}" alt="Image of ${temple.templeName}" loading="lazy">
+          <img src="${temple.imageUrl}" alt="A view of ${temple.templeName}" loading="lazy">
           <h3>${temple.templeName}</h3>
           <p><strong>Location:</strong> ${temple.location}</p>
           <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
           <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
         `;
-        templeContainer.appendChild(templeCard);
+        fragment.appendChild(templeCard);
       });
+  
+      templeContainer.appendChild(fragment);
     }
   
     navLinks.forEach(link => {
@@ -83,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const filter = e.target.dataset.filter;
   
-        // Update ARIA for accessibility
         navLinks.forEach(nav => nav.setAttribute("aria-current", "false"));
         e.target.setAttribute("aria-current", "true");
   
@@ -91,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    // Initial display of all temples
     displayTemples();
   });
   

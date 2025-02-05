@@ -1,9 +1,12 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: lightblue;
+    background-color: #e0f7fa;
     margin: 0;
     padding: 0;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   header {
@@ -32,19 +35,23 @@ body {
     padding: 8px 16px;
     border: 1px solid white;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out;
   }
   
-  nav a:hover {
+  nav a:hover, nav a[aria-current="true"] {
     background: white;
     color: #333;
+  }
+  
+  main {
+    flex-grow: 1;
+    padding: 20px;
   }
   
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
   }
   
   .temple-card {
@@ -84,23 +91,13 @@ body {
   .temple-card p strong {
     color: #333;
   }
+  
   footer {
     background-color: #5d5c61;
     color: white;
     text-align: center;
     padding: 15px 0;
     font-size: 0.9rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  footer p {
-    margin: 5px 0;
-  }
-  
-  footer span {
-    font-weight: bold;
-  }
-   
