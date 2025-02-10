@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Product Review</h1>
+    <form action="review.html" method="get">
+      <!-- Product Name -->
+      <label for="product-name">Product Name</label>
+      <select id="product-name" name="product" required>
+        <option value="" disabled selected>Choose a Product ...</option>
+      </select>
+
+      <!-- Overall Rating -->
+      <label for="rating">Overall Rating</label>
+      <div class="rating">
+        <input type="radio" id="star1" name="rating" value="1" required />
+        <label for="star1">☆</label>
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label for="star2">☆</label>
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label for="star3">☆</label>
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label for="star4">☆</label>
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label for="star5">☆</label>
+      </div>
+
+      <!-- Date of Installation -->
+      <label for="installation-date">Date of Installation</label>
+      <input type="date" id="installation-date" name="installation-date" required />
+
+      <!-- Useful Features -->
+      <label>Which features did you find useful in the product? (Check all that apply)</label>
+      <div class="checkbox-group">
+        <div>
+          <input type="checkbox" id="durability" name="feature" value="Durability" />
+          <label for="durability">Durability</label>
+        </div>
+        <div>
+          <input type="checkbox" id="ease-of-use" name="feature" value="Ease of Use" />
+          <label for="ease-of-use">Ease of Use</label>
+        </div>
+        <div>
+          <input type="checkbox" id="performance" name="feature" value="Performance" />
+          <label for="performance">Performance</label>
+        </div>
+        <div>
+          <input type="checkbox" id="design" name="feature" value="Design" />
+          <label for="design">Design</label>
+        </div>
+      </div>
+
+      <!-- Written Review -->
+      <label for="review">Written Review (Optional)</label>
+      <textarea id="review" name="review" rows="4"></textarea>
+
+      <!-- User Name -->
+      <label for="user-name">Your Name (Optional)</label>
+      <input type="text" id="user-name" name="user-name" />
+
+      <!-- Submit Button -->
+      <button type="submit">Post Review</button>
+    </form>
+  <footer>
+    <p>&copy; 2025 ⛰️ Eyob Teffera ⛰️ Idaho, USA</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+  <script>
+    document.getElementById("last-modified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
