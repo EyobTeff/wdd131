@@ -45,4 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
     alert('Thank you for your review!');
     this.reset();
   });
-  
+   // Update Footer Date
+   function updateFooterDate() {
+    const lastModified = document.lastModified;
+    document.getElementById("lastModified").textContent = lastModified;
+  }
