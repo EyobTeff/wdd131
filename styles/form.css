@@ -1,84 +1,73 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #4d1c47;
-  color: white;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.container {
-  background-color: #d3c2d1;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  margin: 20px;
 }
 
 h1 {
   text-align: center;
-  color: white;
-  background-color: #4d1c47;
-  padding: 10px;
-  border-radius: 8px;
 }
 
-form {
+.form-group {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-label {
-  font-weight: bold;
+.form-group label {
+  width: 150px;
+  margin-right: 10px;
 }
 
-select,
-input[type="date"],
-textarea,
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  flex: 1;
 }
 
 .rating {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating input {
+  display: none;
 }
 
 .rating label {
-  font-size: 24px;
+  font-size: 1.5em;
+  color: lightgray;
   cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: gold;
 }
 
 .checkbox-group {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+}
+
+.checkbox-group label {
+  margin-bottom: 5px;
 }
 
 button {
-  background-color: #4d1c47;
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
-  padding: 10px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
 }
 
 button:hover {
-  background-color: #3a1035;
+  background-color: #45a049;
 }
 
 footer {
   text-align: center;
   margin-top: 20px;
-  font-size: 14px;
 }

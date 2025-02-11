@@ -1,20 +1,26 @@
-document.getElementById("review-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert("Thank you for your review! Your feedback has been submitted.");
-    this.reset();
-  });
-  // Sample product array
-const products = [
-  { id: 1, name: "Product 1" },
-  { id: 2, name: "Product 2" },
-  { id: 3, name: "Product 3" }
-];
+document.addEventListener('DOMContentLoaded', function() {
+  const products = [
+    { id: 1, name: 'Product A' },
+    { id: 2, name: 'Product B' },
+    { id: 3, name: 'Product C' }
+  ];
 
-// Populate product dropdown
-const productDropdown = document.getElementById('product-name');
-products.forEach(product => {
-  const option = document.createElement('option');
-  option.value = product.name;
-  option.textContent = product.name;
-  productDropdown.appendChild(option);
+  const productSelect = document.getElementById('product-name');
+
+  products.forEach(product => {
+    const option = document.createElement('option');
+    option.value = product.name;
+    option.textContent = product.name;
+    productSelect.appendChild(option);
+  });
+
+  const form = document.getElementById('review-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const reviewCount = localStorage.getItem('reviewCount') || 0;
+    localStorage.setItem('reviewCount', parseInt(reviewCount) + 1);
+
+    form.submit();
+  });
 });
