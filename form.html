@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review</title>
+  <meta name="description" content="Submit your review for our products and share your experience.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Product Review</h1>
+    <form id="review-form" aria-label="Product Review Form">
+      <label for="product-name">Product Name</label>
+      <select id="product-name" name="product-name" required>
+        <option value="" disabled selected>Choose a Product ...</option>
+      </select>
+
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <div class="rating">
+          <label><input type="radio" name="rating" value="1" required> ★</label>
+          <label><input type="radio" name="rating" value="2"> ★★</label>
+          <label><input type="radio" name="rating" value="3"> ★★★</label>
+          <label><input type="radio" name="rating" value="4"> ★★★★</label>
+          <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+        </div>
+      </fieldset>
+
+      <label for="date-installed">Date of Installation</label>
+      <input type="date" id="date-installed" name="date-installed" required>
+
+      <fieldset>
+        <legend>Which features did you find useful in the product? (Check all that apply)</legend>
+        <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+        <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+        <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+        <label><input type="checkbox" name="features" value="Design"> Design</label>
+      </fieldset>
+
+      <label for="review-text">Written Review (Optional)</label>
+      <textarea id="review-text" name="review-text" rows="4"></textarea>
+
+      <label for="user-name">Your Name (Optional)</label>
+      <input type="text" id="user-name" name="user-name">
+
+      <button type="submit">Post Review</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ⛰️ Eyob Teffera ⛰️ Idaho, USA</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
