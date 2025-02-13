@@ -4,28 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rexburg Travel Guide</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>Rexburg Travel Guide</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Attractions</a></li>
-        <li><a href="#">Restaurants</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
   </header>
+
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Attractions</a></li>
+      <li><a href="#">Restaurants</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section>
+    <section class="intro">
       <h2>Welcome to Rexburg!</h2>
-      <p>Discover the best places to visit, eat, and enjoy in Rexburg, Idaho.</p>
+      <p>Rexburg is a charming destination full of scenic views and seasonal activities. Whether you visit during Fall, Winter, Spring, or Summer, there's always something exciting to explore!</p>
+    </section>
+
+    <section class="seasons">
+      <h2>Explore by Season</h2>
+      <div class="season" onclick="saveForLater('Fall')">
+        <img src="fall.jpg" alt="Fall in Rexburg">
+        <h3>Fall</h3>
+      </div>
+      <div class="season" onclick="saveForLater('Winter')">
+        <img src="winter.jpg" alt="Winter in Rexburg">
+        <h3>Winter</h3>
+      </div>
+      <div class="season" onclick="saveForLater('Spring')">
+        <img src="spring.jpg" alt="Spring in Rexburg">
+        <h3>Spring</h3>
+      </div>
+      <div class="season" onclick="saveForLater('Summer')">
+        <img src="summer.jpg" alt="Summer in Rexburg">
+        <h3>Summer</h3>
+      </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Rexburg Travel Guide. All rights reserved.</p>
+    <p>&copy; 2025 Rexburg Travel Guide. All rights reserved. Last modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
