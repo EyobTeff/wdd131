@@ -1,19 +1,38 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
+  background-color: lightslategray;
   color: #333;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Hero section with title overlay */
 .hero {
-  background: url('rexburg-hero.jpg') no-repeat center center/cover;
-  color: white;
+  position: relative;
   text-align: center;
-  padding: 100px 20px;
+  color: white;
 }
 
+.hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(70%); /* Darken the image slightly */
+}
+
+.hero h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Navigation */
 .main-nav ul {
   display: flex;
   justify-content: center;
@@ -28,7 +47,7 @@ body {
 }
 
 .main-nav ul li a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
@@ -37,36 +56,65 @@ body {
   text-decoration: underline;
 }
 
-.intro {
-  text-align: center;
-  padding: 20px;
-}
-
-.seasons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Seasons Section */
+#seasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-  padding: 20px;
+  margin-top: 20px;
 }
 
 .season {
-  flex: 1 1 calc(25% - 20px);
-  max-width: 200px;
-  text-align: center;
+  text-align:center;
   cursor: pointer;
   transition: transform 0.2s;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.season img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.season h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Winter season background */
+.winter {
+  background-color: #e0e0e0; /* Light gray */
 }
 
 .season:hover {
   transform: scale(1.05);
 }
 
-.season img {
-  width: 100%;
-  border-radius: 8px;
+/* Confirmation Message */
+#confirmationMessage {
+  position: fixed; /* Fixed position at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000; /* Ensure it appears above other content */
+  display: none; /* Initially hidden */
 }
 
+#confirmationMessage.hidden {
+  display: none; /* Hide when the class is applied */
+}
+
+/* Footer */
 footer {
   text-align: center;
   background: #333;
